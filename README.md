@@ -12,14 +12,14 @@ Translations are stored in Locaize's Redis-based storage and are served dynamica
 
 - **Automatic Translations**: Content is translated dynamically without manual intervention.
 - **Wide Language Support**: Multiple languages available out of the box.
-- **Dynamic Values Support**: Anonymized parameter translation.
+- **Privacy-first approach**: The dynamic values are automatically parsed and replaced with placeholders during translation.
 - **Optimized for Developer Experience**: Seamless integration and easy-to-use API.
 - **Efficient Storage**: Translations are cached and served via Redis for fast access.
 
 Coming Soon:
 
 - **Web Platform**: Manual translation editing for greater control.
-- **Dynamic Values Support**: Option for translating dynamic values directly.
+- **Dynamic Values Translation**: Option for translating dynamic values directly.
 
 ## Installation
 
