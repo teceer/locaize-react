@@ -51,38 +51,44 @@ exports.clc = clc;
 var react_1 = require("react");
 var LanguageContext_1 = require("./LanguageContext");
 var LOCAIZE_API_URL = "https://api.locaize.com";
+var LOCAIZE_API_KEY = process.env.LOCAIZE_API_KEY;
 var fetchTranslation = function fetchTranslation(template, language) {
     return __awaiter(this, void 0, void 0, function () {
         var res, data, error_1;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    _a.trys.push([0, 3, , 4]);
+                    if (!LOCAIZE_API_KEY) {
+                        throw new Error("Missing LOCAIZE_API_KEY environment variable");
+                    }
+                    _a.label = 1;
+                case 1:
+                    _a.trys.push([1, 4, , 5]);
                     return [4 /*yield*/, fetch("".concat(LOCAIZE_API_URL, "/translate"), {
                             method: "POST",
                             headers: {
                                 "Content-Type": "application/json",
-                                Authorization: "YOUR_API_KEY",
+                                Authorization: LOCAIZE_API_KEY,
                             },
                             body: JSON.stringify({
                                 language: language,
                                 value: template,
                             }),
                         })];
-                case 1:
+                case 2:
                     res = _a.sent();
                     if (!res.ok) {
                         throw new Error("Translation request failed");
                     }
                     return [4 /*yield*/, res.json()];
-                case 2:
+                case 3:
                     data = (_a.sent());
                     return [2 /*return*/, data.translated];
-                case 3:
+                case 4:
                     error_1 = _a.sent();
                     console.error("Translation failed:", error_1);
                     return [2 /*return*/, template]; // Return original text as fallback
-                case 4: return [2 /*return*/];
+                case 5: return [2 /*return*/];
             }
         });
     });

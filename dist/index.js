@@ -1,10 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.clc = exports.slc = exports.SelectLanguage = exports.useLanguage = exports.LanguageProvider = void 0;
+exports.createLocaizeClient = exports.SelectLanguage = exports.useLanguage = exports.LanguageProvider = void 0;
 var LanguageContext_1 = require("./LanguageContext");
 Object.defineProperty(exports, "LanguageProvider", { enumerable: true, get: function () { return LanguageContext_1.LanguageProvider; } });
 Object.defineProperty(exports, "useLanguage", { enumerable: true, get: function () { return LanguageContext_1.useLanguage; } });
 Object.defineProperty(exports, "SelectLanguage", { enumerable: true, get: function () { return LanguageContext_1.SelectLanguage; } });
-var functions_1 = require("./functions");
-Object.defineProperty(exports, "slc", { enumerable: true, get: function () { return functions_1.slc; } });
-Object.defineProperty(exports, "clc", { enumerable: true, get: function () { return functions_1.clc; } });
+var locaizeClient_1 = require("./locaizeClient");
+Object.defineProperty(exports, "createLocaizeClient", { enumerable: true, get: function () { return locaizeClient_1.createLocaizeClient; } });
