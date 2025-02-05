@@ -15,16 +15,6 @@ export const LanguageProvider: React.FC<{ language: Language; children: React.Re
   children,
 }) => {
   const [lang, setLang] = useState<Language>(language);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    const userLanguage = navigator.language as Language;
-    setLang(userLanguage);
-  }, [mounted]);
 
   return (
     <LanguageContext.Provider value={{ language: lang, setLanguage: setLang }}>{children}</LanguageContext.Provider>
