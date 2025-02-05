@@ -16,7 +16,6 @@
     "localization",
     "i18n"
   ],
-  "private": true,
   "author": "Wojciech Chudzikowski @teceer",
   "license": "MIT",
   "compilerOptions": {
