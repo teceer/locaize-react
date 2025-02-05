@@ -1,0 +1,48 @@
+{
+  "name": "@locaize/react",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/example.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teceer/locaize-react.git"
+  },
+  "keywords": [
+    "react",
+    "localization",
+    "i18n"
+  ],
+  "private": true,
+  "author": "Wojciech Chudzikowski @teceer",
+  "license": "MIT",
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "jsx": "react",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "dependencies": {
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.8",
+    "typescript": "^5.7.3"
+  },
+  "bugs": {
+    "url": "https://github.com/teceer/locaize-react/issues"
+  },
+  "homepage": "https://github.com/teceer/locaize-react#readme",
+  "description": ""
+}
+
