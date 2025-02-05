@@ -78,8 +78,6 @@ import { clc } from "@/lib/utils";
 
 - **Web-based Translation Management**: Manual editing of translations.
 - **Non-Anonymized Parameter Support**: Translate dynamic values directly.
-- **Improved SSR Support**: Enhancements for SEO and server-side rendering.
-- **Custom Storage Options**: Support for alternative storage backends.
 
 ## Contributing
 
