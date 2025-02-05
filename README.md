@@ -1,39 +1,41 @@
 # Locaize - React Library
 
-> **Note**: This library is currently in development and will soon be ready for use. Please check back for updates.
+> **Note**: Locaize has not been officially released yet. This README is a placeholder for future releases. Stay tuned for future updates.
 
-Locaize is designed to simplify the process of internationalization and localization in React applications. It provides a set of tools to manage languages, translate content, and adapt your app to different regions and cultures.
+## Introduction
+
+Locaize simplifies internationalization (i18n) and localization (l10n) in React applications. It automatically generates translations during both development and production, offering seamless multilingual support with minimal developer effort.
+
+Translations are stored in Locaize's Redis-based storage and are served dynamically on request. A web platform for manually editing translations will be available soon.
 
 ## Features
 
-- **Language Management**: Easily switch between languages and manage the language state of your application.
-- **Translation**: Utilize the Locaize API to translate your content dynamically, both on the client and server sides.
-- **Context API**: Leverage the React Context API to access and manage language state across your application.
-- **Server-Side Rendering**: Supports server-side rendering for SEO optimization and faster page loads.
+- **Automatic Translations**: Content is translated dynamically without manual intervention.
+- **Wide Language Support**: Multiple languages available out of the box.
+- **Optimized for Developer Experience**: Seamless integration and easy-to-use API.
+- **Efficient Storage**: Translations are cached and served via Redis for fast access.
+- **Dynamic Value Support (Coming Soon)**: Anonymized parameter translation (support for non-anonymized parameters coming soon!).
+- **Web Platform (Coming Soon)**: Manual translation editing for greater control.
 
 ## Installation
 
-To install Locaize React, run the following command in your terminal:
+Install Locaize React using your preferred package manager:
 
 ```bash
 npm install @locaize/react
 ```
 
-or
+```bash
+yarn add @locaize/react
+```
 
 ```bash
 pnpm add @locaize/react
 ```
 
-or
-
-```bash
-yarn add @locaize/react
-```
-
 ## Usage
 
-To get started with Locaize React, import the necessary components and functions from the library:
+### Initializing Locaize
 
 ```typescript
 // utils.ts
@@ -44,15 +46,19 @@ export const slc = locaize.serverSide();
 export const clc = locaize.clientSide();
 ```
 
-```typescript
-// Wrap your app with the LanguageProvider
+### Wrapping Your App
+
+```tsx
+import { LanguageProvider } from "@locaize/react";
+
 <LanguageProvider language="en-US">
   <App />
-</LanguageProvider>
+</LanguageProvider>;
 ```
 
-```typescript
-// Use the SelectLanguage component to render a dropdown for language selection
+### Using Translations in Components
+
+```tsx
 import { SelectLanguage } from "@locaize/react";
 import { clc } from "@/lib/utils";
 
@@ -62,17 +68,24 @@ import { clc } from "@/lib/utils";
 </main>;
 ```
 
-For more detailed instructions and examples, please refer to the [Locaize React documentation](https://github.com/teceer/locaize-react#readme).
+## Roadmap
+
+### Upcoming Features:
+
+- **Web-based Translation Management**: Manual editing of translations.
+- **Non-Anonymized Parameter Support**: Translate dynamic values directly.
+- **Improved SSR Support**: Enhancements for SEO and server-side rendering.
+- **Custom Storage Options**: Support for alternative storage backends.
 
 ## Contributing
 
-Contributions are welcome! If you'd like to contribute to Locaize React, please follow these steps:
+Contributions are welcome! Follow these steps to contribute:
 
 1. Fork the repository.
-2. Create a new branch for your feature or fix.
+2. Create a new branch.
 3. Make your changes and commit them.
-4. Push your branch to your forked repository.
-5. Submit a pull request to the original repository.
+4. Push your branch.
+5. Open a pull request.
 
 ## License
 
