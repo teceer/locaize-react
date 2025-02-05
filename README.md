@@ -36,7 +36,6 @@ To get started with Locaize React, import the necessary components and functions
 ```typescript
 // utils.ts
 import { createLocaizeClient } from "@locaize/react";
-import { createLocaizeClient } from "@locaize/react";
 
 const locaize = createLocaizeClient({ apiKey: "YOUR_API_KEY" });
 export const slc = locaize.serverSide();
