@@ -1,6 +1,8 @@
-# Locaize React
+# Locaize - React Library
 
-Locaize React is a library designed to simplify the process of internationalization and localization in React applications. It provides a set of tools to manage languages, translate content, and adapt your app to different regions and cultures.
+> **Note**: This library is currently in development and will soon be ready for use. Please check back for updates.
+
+Locaize is designed to simplify the process of internationalization and localization in React applications. It provides a set of tools to manage languages, translate content, and adapt your app to different regions and cultures.
 
 ## Features
 

@@ -1,6 +1,6 @@
 {
   "name": "@locaize/react",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -45,3 +45,4 @@
   "homepage": "https://github.com/teceer/locaize-react#readme",
   "description": ""
 }
+
